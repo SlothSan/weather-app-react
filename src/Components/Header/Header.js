@@ -1,7 +1,9 @@
 const Header = () => {
     return (
-        <header>
-            <h1>SlothSan's Weather App</h1>
+        <header className={"weatherAppHeader"}>
+            <h1 className={"weatherAppTitle"}>SlothSan's Weather App</h1>
+            <p className={"weatherAppText"}>Please see below for a day forecast for your area.</p>
+            <p className={"weatherAppText"}>More features to come!</p>
         </header>
     )
 }
