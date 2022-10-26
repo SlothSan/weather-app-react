@@ -4,7 +4,7 @@ const CurrentWeatherCard = (props) => {
         <div className={"currentWeatherCard"}>
             <div className={"locationContainer"}>
                 <p>Current weather for {props.currentLocationName}</p>
-                <p>Last updated: {props.currentWeatherData.last_updated.split(" ").reverse().join(" ")}</p>
+                <p>Last updated: {props.currentWeatherData.last_updated}</p>
             </div>
             <div className={"conditionsContainer"}>
                 <p>Conditions: {props.currentWeatherData.condition.text}</p>
