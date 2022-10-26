@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import CurrentWeatherDisplayCards from "./CurrentWeatherDisplayCards/CurrentWeatherDisplayCards";
+import FiveDayForecastDisplayCards from "./FiveDayForecastDisplayCards/FiveDayForecastDisplayCards";
 
 
 const WeatherDisplayContainer = () => {
@@ -47,6 +48,7 @@ const WeatherDisplayContainer = () => {
                             currentLocationName={currentLocationName}
                             currentLocationState={currentLocationState}
                             currentLocationCountry={currentLocationCountry} /> : ''}
+            {locationSet ? <FiveDayForecastDisplayCards currentLocationName={currentLocationName} /> : ''}
         </div>
     )
 }
