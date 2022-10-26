@@ -16,7 +16,7 @@ const CurrentWeatherDisplayCards = (props) => {
 
     useEffect(() => {
         getWeatherData()
-    }, [])
+    }, )
 
 
 

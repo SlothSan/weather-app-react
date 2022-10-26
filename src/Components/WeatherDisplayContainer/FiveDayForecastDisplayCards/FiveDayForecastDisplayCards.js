@@ -16,12 +16,16 @@ const FiveDayForecastDisplayCards = (props) => {
 
     useEffect(() => {
         getForecastData()
-        console.log(forecastData)
-    }, [])
+    },)
 
     return (
         <div>
-            {forecastDataSet ? <ForecastCard forecastData={forecastData}/> : <p>Data is not set</p>}
+            {forecastDataSet ? forecastData.map(data => {
+                    return (
+                        <ForecastCard currentLocationName={props.currentLocationName}
+                                      forecastData={data}/>
+                    )
+                }) : <p>Data is not set</p>}
         </div>
     )
 }
