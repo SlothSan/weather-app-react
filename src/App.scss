@@ -8,6 +8,7 @@ $text-orange: #FF8E00;
 
 body {
     font-size: 16px;
+    background-color: $background-blue
 }
 
 .weatherAppHeader {
@@ -19,10 +20,19 @@ body {
     justify-content: center;
     align-items: center;
     border-bottom: 3px solid $text-orange;
+    border-top: 3px solid $text-orange;
     .weatherAppTitle {
         font-size: 1rem;
+        font-weight: bold;
     }
     .weatherAppText {
         font-size: 0.8rem;
+        font-style: italic;
     }
+}
+
+.weatherDisplayContainer {
+    height: 500px;
+    width: 100%;
+    background-color: $background-blue;
 }
