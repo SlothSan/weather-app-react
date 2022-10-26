@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import WeatherDisplayCards from "./WeatherDisplayCards/WeatherDisplayCards";
+import CurrentWeatherDisplayCards from "./CurrentWeatherDisplayCards/CurrentWeatherDisplayCards";
 
 
 const WeatherDisplayContainer = () => {
@@ -43,7 +43,7 @@ const WeatherDisplayContainer = () => {
 
     return (
         <div className={"weatherDisplayContainer"}>
-            {locationSet ? <WeatherDisplayCards
+            {locationSet ? <CurrentWeatherDisplayCards
                             currentLocationName={currentLocationName}
                             currentLocationState={currentLocationState}
                             currentLocationCountry={currentLocationCountry} /> : ''}

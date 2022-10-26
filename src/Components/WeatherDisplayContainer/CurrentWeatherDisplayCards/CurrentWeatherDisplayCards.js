@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import CurrentWeatherCard from "./CurrentWeatherCard/CurrentWeatherCard";
 
-const WeatherDisplayCards = (props) => {
+const CurrentWeatherDisplayCards = (props) => {
     const [currentWeatherData, setCurrentWeatherData] = useState({})
     const [weatherDataSet, setWeatherDataSet] = useState(false)
 
@@ -28,4 +28,4 @@ const WeatherDisplayCards = (props) => {
     )
 }
 
-export default WeatherDisplayCards
+export default CurrentWeatherDisplayCards
