@@ -10,7 +10,7 @@ const FiveDayForecastDisplayCards = (props) => {
                    &q=${props.currentLocationName}&days=5&aqi=no&alerts=no`
         const forecastDataFromApi = await fetch(url)
         const forecastDataJson = await forecastDataFromApi.json()
-        setForecastData(forecastDataJson)
+        setForecastData(forecastDataJson.forecast.forecastday)
         setForecastDataSet(true)
     }
 
