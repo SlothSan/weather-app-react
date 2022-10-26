@@ -1,10 +1,12 @@
 import {useEffect, useState} from "react";
+import WeatherDisplayCards from "./WeatherDisplayCards/WeatherDisplayCards";
 
 
 const WeatherDisplayContainer = () => {
     const [currentLatitude, setCurrentLatitude] = useState(0)
     const [currentLongitude, setCurrentLongitude] = useState(0)
     const [coordsSet, setCoordsSet] = useState(false)
+    const [locationSet, setLocationSet] = useState(false)
     const [currentLocationName, setCurrentLocationName] = useState('')
     const [currentLocationState, setCurrentLocationState] = useState('')
     const [currentLocationCountry, setCurrentLocationCountry] = useState('')
@@ -22,6 +24,7 @@ const WeatherDisplayContainer = () => {
         setCurrentLocationName(locationDataJson[0].name)
         setCurrentLocationState(locationDataJson[0].state)
         setCurrentLocationCountry(locationDataJson[0].country)
+        setLocationSet(true);
     }
 
     useEffect(() => {
@@ -40,8 +43,10 @@ const WeatherDisplayContainer = () => {
 
     return (
         <div className={"weatherDisplayContainer"}>
-            <p>Current Coordinates: {currentLatitude}, {currentLongitude}</p>
-            <p>Current Location: {currentLocationName}, {currentLocationState}, {currentLocationCountry}</p>
+            {locationSet ? <WeatherDisplayCards
+                            currentLocationName={currentLocationName}
+                            currentLocationState={currentLocationState}
+                            currentLocationCountry={currentLocationCountry} /> : ''}
         </div>
     )
 }

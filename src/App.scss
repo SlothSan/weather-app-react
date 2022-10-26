@@ -39,8 +39,25 @@ body {
     flex-direction: column;
     align-items: center;
     color: $text-orange;
-    .weatherDisplayLocationContainer {
+}
+
+.currentWeatherCard {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    width: 300px;
+    height: auto;
+    border: 3px solid $text-orange;
+    margin-top: 10px;
+    align-items: center;
+    .locationContainer {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 3px solid $text-orange;
+    }
+    .conditionsContainer {
         padding: 10px;
-        font-weight: bold;
+        display: flex;
+        flex-direction: column;
     }
 }
