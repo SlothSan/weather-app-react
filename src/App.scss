@@ -35,4 +35,12 @@ body {
     height: 500px;
     width: 100%;
     background-color: $background-blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $text-orange;
+    .weatherDisplayLocationContainer {
+        padding: 10px;
+        font-weight: bold;
+    }
 }

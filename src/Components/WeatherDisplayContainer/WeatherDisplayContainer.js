@@ -26,14 +26,15 @@ const WeatherDisplayContainer = () => {
             convertCoordsToLocation()
         } else {
             setLocationEnabled(false)
-            setCurrentLocation({name: 'Bristol', Country: 'GB', state: 'England'})
+            setCurrentLocation({name: 'Bristol', country: 'GB', state: 'England'})
         }
     }, [])
 
     return (
         <div className={"weatherDisplayContainer"}>
-            <p>Your current latitude is: {currentLatitude}</p>
-            <p>Your current longitude is: {currentLongitude}</p>
+            <div className={"weatherDisplayLocationContainer"}>
+                <p>Your current location is: {currentLocation.name}, {currentLocation.state}, {currentLocation.country}</p>
+            </div>
         </div>
     )
 }
