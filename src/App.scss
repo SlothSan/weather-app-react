@@ -61,3 +61,25 @@ body {
         flex-direction: column;
     }
 }
+
+footer {
+    background-color: $text-orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $background-blue;
+    height: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    i {
+        margin-left: 10px;
+        font-size: 1.2rem;
+    }
+    .fa-spin-hover:hover {
+        animation: fa-spin 0.4s ease-in-out;
+    }
+}
