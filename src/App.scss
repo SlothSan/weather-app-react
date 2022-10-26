@@ -32,7 +32,7 @@ body {
 }
 
 .weatherDisplayContainer {
-    height: 500px;
+    height: 100%;
     width: 100%;
     background-color: $background-blue;
     display: flex;
@@ -65,6 +65,10 @@ body {
 
 footer {
     background-color: $text-orange;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
