@@ -39,7 +39,7 @@ body {
     flex-direction: column;
     align-items: center;
     color: $text-orange;
-    padding: 10px;
+    padding: 30px 0 30px 0;
 }
 
 .currentWeatherCard {
@@ -106,15 +106,19 @@ footer {
     }
 
     input {
-        background-color: $background-blue;
-        color: $text-orange;
+        background-color: $background-blue !important;
+        color: $text-orange !important;
         border: 1px solid $text-orange;
         width: 200px;
+        font-weight: bold;
+        font-size: 1rem;
     }
 
     input:focus {
         outline: none !important;
         border: 3px solid $text-orange;
+        background-color: $background-blue;
+        color: $text-orange;
     }
     ::placeholder {
         color: $text-orange;

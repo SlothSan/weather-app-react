@@ -23,7 +23,7 @@ const CurrentWeatherDisplayCards = (props) => {
     return (
         <div>
             {weatherDataSet ? <CurrentWeatherCard currentWeatherData={currentWeatherData}
-                                                      currentLocationName={props.currentLocationName}/> : ''}
+                                                  currentLocationName={props.currentLocationName}/> : ''}
         </div>
     )
 }
