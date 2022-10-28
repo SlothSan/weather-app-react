@@ -2,7 +2,7 @@ import {useRef} from "react";
 
 const SearchSection = (props) => {
     const locationInput = useRef(null)
-
+    //TODO Add autocomplete functionality!
     const handleSubmit = (event) => {
         event.preventDefault()
         props.setCurrentLocationName(locationInput.current.value)

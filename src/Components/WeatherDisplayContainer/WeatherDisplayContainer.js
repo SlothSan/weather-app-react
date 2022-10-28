@@ -6,6 +6,7 @@ import FiveDayForecastDisplayCards from "./FiveDayForecastDisplayCards/FiveDayFo
 const WeatherDisplayContainer = (props) => {
 
     const getUsersCoordsFromLocation =  async () => {
+        props.setCurrentLocationCountry('')
         let url = `https://api.api-ninjas.com/v1/geocoding?city=${props.currentLocationName}`
         let requestOptions = {
             method: 'GET',
@@ -53,8 +54,6 @@ const WeatherDisplayContainer = (props) => {
     useEffect(() => {
         getUsersLocationFromCoords()
     }, [props.coordsSet === true])
-
-
 
     useEffect(() => {
         getUsersCoordsFromLocation()
