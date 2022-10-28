@@ -25,7 +25,7 @@ const FiveDayForecastDisplayCards = (props) => {
                         <ForecastCard currentLocationName={props.currentLocationName}
                                       forecastData={data}/>
                     )
-                }) : <p>Data is not set</p>}
+                }) : ''}
         </div>
     )
 }
