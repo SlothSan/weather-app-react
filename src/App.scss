@@ -94,6 +94,36 @@ footer {
     }
 }
 
+.searchSelection {
+    padding: 10px;
+    color: $text-orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    i {
+        color: $text-orange;
+    }
+
+    input {
+        background-color: $background-blue;
+        color: $text-orange;
+    }
+    ::placeholder {
+        color: $text-orange;
+        font-weight: bold;
+    }
+
+    form {
+        padding-top: 10px;
+    }
+    button {
+        background-color: $background-blue;
+    }
+
+    p {}
+}
+
 .optionsSection {
     margin: 10px;
     display: flex;

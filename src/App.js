@@ -4,6 +4,7 @@ import WeatherDisplayContainer from "./Components/WeatherDisplayContainer/Weathe
 import Footer from "./Components/Footer/Footer";
 import OptionsSection from "./Components/OptionsSection/OptionsSection";
 import {useState} from "react";
+import SearchSection from "./Components/SearchSection/SearchSection";
 
 function App() {
     const [currentWeatherSelected, setCurrentWeatherSelected] = useState(true)
@@ -12,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
+      <SearchSection />
       <OptionsSection currentWeatherSelected={currentWeatherSelected}
                       setCurrentWeatherSelected={setCurrentWeatherSelected}
                       forecastWeatherSelected={forecastWeatherSelected}
