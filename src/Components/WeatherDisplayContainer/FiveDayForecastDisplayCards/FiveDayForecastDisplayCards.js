@@ -28,7 +28,7 @@ const FiveDayForecastDisplayCards = (props) => {
                   dynamicHeight={false}>
             {forecastDataSet ? forecastData.map(data => {
                     return (
-                        <ForecastCard currentLocationName={props.currentLocationName}
+                        <ForecastCard key={data.date} currentLocationName={props.currentLocationName}
                                       forecastData={data}/>
                     )
                 }) : ''}
