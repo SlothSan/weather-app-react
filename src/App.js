@@ -12,24 +12,43 @@ function App() {
     const [currentLocationName, setCurrentLocationName] = useState('')
     const [currentLocationState, setCurrentLocationState] = useState('')
     const [currentLocationCountry, setCurrentLocationCountry] = useState('')
+    const [currentLatitude, setCurrentLatitude] = useState(0)
+    const [currentLongitude, setCurrentLongitude] = useState(0)
+    const [coordsSet, setCoordsSet] = useState(false)
+    const [locationSet, setLocationSet] = useState(false)
+    const [locationChanged, setLocationChanged] = useState(false);
+
 
   return (
     <div className="App">
       <Header/>
       <SearchSection setCurrentLocationName={setCurrentLocationName}
-                     currentLocationName={currentLocationName}/>
+                     currentLocationName={currentLocationName}
+                    currentLocationCountry={currentLocationCountry}
+                    setLocationChanged={setLocationChanged}/>
       <OptionsSection currentWeatherSelected={currentWeatherSelected}
                       setCurrentWeatherSelected={setCurrentWeatherSelected}
                       forecastWeatherSelected={forecastWeatherSelected}
                       setForecastWeatherSelected={setForecastWeatherSelected}/>
-      <WeatherDisplayContainer currentWeatherSelected={currentWeatherSelected}
-                               forecastWeatherSelected={forecastWeatherSelected}
-                               currentLocationName={currentLocationName}
-                               setCurrentLocationName={setCurrentLocationName}
-                               setCurrentLocationState={setCurrentLocationState}
-                               setCurrentLocationCountry={setCurrentLocationCountry}
-                               currentLocationState={currentLocationState}
-                               currentLocationCountry={currentLocationCountry}/>
+      <WeatherDisplayContainer
+          currentWeatherSelected={currentWeatherSelected}
+          forecastWeatherSelected={forecastWeatherSelected}
+          currentLocationName={currentLocationName}
+          setCurrentLocationName={setCurrentLocationName}
+          setCurrentLocationState={setCurrentLocationState}
+          setCurrentLocationCountry={setCurrentLocationCountry}
+          currentLocationState={currentLocationState}
+          currentLocationCountry={currentLocationCountry}
+          currentLatitude={currentLatitude}
+          currentLongitude={currentLongitude}
+          setCurrentLatitude={setCurrentLatitude}
+          setCurrentLongitude={setCurrentLongitude}
+          coordsSet={coordsSet}
+          setCoordsSet={setCoordsSet}
+          locationSet={locationSet}
+          setLocationSet={setLocationSet}
+          locationChanged={locationChanged}
+          setLocationChanged={setLocationChanged}/>
       <Footer />
     </div>
   );
