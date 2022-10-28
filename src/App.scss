@@ -87,3 +87,18 @@ footer {
         animation: fa-spin 0.4s ease-in-out;
     }
 }
+
+.optionsSection {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+        background-color: $text-orange;
+        color: $background-blue;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-radius: 5px;
+        margin: 5px;
+    }
+}
