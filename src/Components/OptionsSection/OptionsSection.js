@@ -13,7 +13,7 @@ const OptionsSection = (props) => {
     return (
         <section className={"optionsSection"}>
             <button onClick={handleClickCurrentWeather}>Current Weather</button>
-            <button onClick={handleClickForecastWeather}>Five Day Forecast</button>
+            <button onClick={handleClickForecastWeather}>Ten Day Forecast</button>
         </section>
     )
 }
