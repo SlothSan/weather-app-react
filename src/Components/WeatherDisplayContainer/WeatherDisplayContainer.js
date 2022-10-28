@@ -22,9 +22,9 @@ const WeatherDisplayContainer = (props) => {
         }
         const locationData = await fetch(url, requestOptions);
         const locationDataJson = await locationData.json();
-        setCurrentLocationName(locationDataJson[0].name)
-        setCurrentLocationState(locationDataJson[0].state)
-        setCurrentLocationCountry(locationDataJson[0].country)
+        props.setCurrentLocationName(locationDataJson[0].name)
+        props.setCurrentLocationState(locationDataJson[0].state)
+        props.setCurrentLocationCountry(locationDataJson[0].country)
         setLocationSet(true);
     }
 
@@ -45,11 +45,11 @@ const WeatherDisplayContainer = (props) => {
     return (
         <div className={"weatherDisplayContainer"}>
             {locationSet ? props.currentWeatherSelected ? <CurrentWeatherDisplayCards
-                currentLocationName={currentLocationName}
-                currentLocationState={currentLocationState}
-                currentLocationCountry={currentLocationCountry} /> : '' : ''}
+                currentLocationName={props.currentLocationName}
+                currentLocationState={props.currentLocationState}
+                currentLocationCountry={props.currentLocationCountry} /> : '' : ''}
             {locationSet ? props.forecastWeatherSelected ?
-                <FiveDayForecastDisplayCards currentLocationName={currentLocationName} /> : '' : ''}
+                <FiveDayForecastDisplayCards currentLocationName={props.currentLocationName} /> : '' : ''}
         </div>
     )
 }
