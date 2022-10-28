@@ -33,7 +33,7 @@ body {
 }
 
 .weatherDisplayContainer {
-    height: 100%;
+    height: auto;
     width: 100%;
     background-color: $background-blue;
     display: flex;
@@ -48,20 +48,25 @@ body {
     flex-direction: column;
     font-weight: bold;
     width: 300px;
-    height: auto;
+    height: 400px;
     border: 3px solid $text-orange;
-    margin: 25px 0 25px 0;
+    padding: 25px 0 25px 0;
     align-items: center;
     .locationContainer {
         display: flex;
         flex-direction: column;
         border-bottom: 3px solid $text-orange;
-        margin-top: 10px;
+        margin-top: 5px;
     }
     .conditionsContainer {
-        padding: 10px;
+        padding: 5px;
+        margin-bottom: 20px;
         display: flex;
         flex-direction: column;
+    }
+    img {
+        height: 175px;
+        width: 175px;
     }
 }
 
@@ -75,6 +80,7 @@ footer {
     height: 50px;
     font-weight: bold;
     font-size: 1rem;
+    margin-top: 10px;
     a {
         text-decoration: none;
         color: inherit;
@@ -89,7 +95,7 @@ footer {
 }
 
 .optionsSection {
-    margin-top: 10px;
+    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,4 +107,22 @@ footer {
         border-radius: 5px;
         margin: 5px;
     }
+}
+
+.control-next.control-arrow:before  {
+    border-left: 8px solid $text-orange !important;
+    opacity: 1 !important;
+}
+
+.carousel .control-prev.control-arrow:before {
+    border-right: 8px solid $text-orange !important;
+    opacity: 1 !important;
+}
+
+.carousel .control-arrow, .carousel.carousel-slider .control-arrow {
+    opacity: 1 !important;
+}
+
+.carousel .control-dots .dot {
+    background-color: $text-orange !important;
 }

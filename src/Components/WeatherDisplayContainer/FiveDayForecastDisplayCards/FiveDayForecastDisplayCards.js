@@ -1,5 +1,7 @@
 import {useEffect, useState} from "react";
 import ForecastCard from "./ForecastCard/ForecastCard";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import {Carousel} from "react-responsive-carousel";
 
 const FiveDayForecastDisplayCards = (props) => {
     const [forecastData, setForecastData] = useState({})
@@ -19,14 +21,18 @@ const FiveDayForecastDisplayCards = (props) => {
     },)
 
     return (
-        <div>
+        <Carousel className={'carouselContainer'} showIndicators={true}
+                  axis={"vertical"}
+                  showStatus={false}
+                  showThumbs={false}
+                  dynamicHeight={false}>
             {forecastDataSet ? forecastData.map(data => {
                     return (
-                        <ForecastCard currentLocationName={props.currentLocationName}
+                        <ForecastCard key={data.date} currentLocationName={props.currentLocationName}
                                       forecastData={data}/>
                     )
-                }) : <p>Data is not set</p>}
-        </div>
+                }) : ''}
+        </Carousel>
     )
 }
 
