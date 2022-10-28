@@ -3,7 +3,7 @@ import CurrentWeatherDisplayCards from "./CurrentWeatherDisplayCards/CurrentWeat
 import FiveDayForecastDisplayCards from "./FiveDayForecastDisplayCards/FiveDayForecastDisplayCards";
 
 
-const WeatherDisplayContainer = () => {
+const WeatherDisplayContainer = (props) => {
     const [currentLatitude, setCurrentLatitude] = useState(0)
     const [currentLongitude, setCurrentLongitude] = useState(0)
     const [coordsSet, setCoordsSet] = useState(false)
@@ -44,11 +44,12 @@ const WeatherDisplayContainer = () => {
 
     return (
         <div className={"weatherDisplayContainer"}>
-            {locationSet ? <CurrentWeatherDisplayCards
-                            currentLocationName={currentLocationName}
-                            currentLocationState={currentLocationState}
-                            currentLocationCountry={currentLocationCountry} /> : ''}
-            {locationSet ? <FiveDayForecastDisplayCards currentLocationName={currentLocationName} /> : ''}
+            {locationSet ? props.currentWeatherSelected ? <CurrentWeatherDisplayCards
+                currentLocationName={currentLocationName}
+                currentLocationState={currentLocationState}
+                currentLocationCountry={currentLocationCountry} /> : '' : ''}
+            {locationSet ? props.forecastWeatherSelected ?
+                <FiveDayForecastDisplayCards currentLocationName={currentLocationName} /> : '' : ''}
         </div>
     )
 }

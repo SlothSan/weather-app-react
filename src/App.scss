@@ -23,11 +23,11 @@ body {
     border-bottom: 3px solid $text-orange;
     border-top: 3px solid $text-orange;
     .weatherAppTitle {
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: bold;
     }
     .weatherAppText {
-        font-size: 0.8rem;
+        font-size: 1rem;
         font-style: italic;
     }
 }
@@ -50,7 +50,7 @@ body {
     width: 300px;
     height: auto;
     border: 3px solid $text-orange;
-    margin-top: 25px;
+    margin: 25px 0 25px 0;
     align-items: center;
     .locationContainer {
         display: flex;
