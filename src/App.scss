@@ -20,8 +20,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: 3px solid $text-orange;
-    border-top: 3px solid $text-orange;
+    border: 3px solid $text-orange;
     .weatherAppTitle {
         font-size: 1.2rem;
         font-weight: bold;
@@ -101,6 +100,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-bottom: 3px solid $text-orange;
     i {
         color: $text-orange;
     }
@@ -108,6 +108,13 @@ footer {
     input {
         background-color: $background-blue;
         color: $text-orange;
+        border: 1px solid $text-orange;
+        width: 200px;
+    }
+
+    input:focus {
+        outline: none !important;
+        border: 3px solid $text-orange;
     }
     ::placeholder {
         color: $text-orange;
@@ -116,19 +123,26 @@ footer {
 
     form {
         padding-top: 10px;
+        display: flex;
+        flex-direction: column;
     }
     button {
         background-color: $background-blue;
+        margin-left: 5px;
+        border: 1px solid $text-orange;
     }
 
-    p {}
+    .inputContainer {
+        width: 100%;
+    }
 }
 
 .optionsSection {
-    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 3px solid $text-orange;
+    padding: 10px 0 10px 0;
     button {
         background-color: $text-orange;
         color: $background-blue;
