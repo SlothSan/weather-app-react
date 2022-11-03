@@ -6,7 +6,7 @@ const CurrentWeatherDisplayCards = (props) => {
     const [weatherDataSet, setWeatherDataSet] = useState(false)
 
     const getWeatherData = async () => {
-        let url = `http://api.weatherapi.com/v1/current.json?key=
+        let url = `https://api.weatherapi.com/v1/current.json?key=
                    2bb1c7417c4749d9a28102637222510&q=${props.currentLocationName}&aqi=no`
         const weatherData = await fetch(url)
         const weatherDataJson = await weatherData.json()
